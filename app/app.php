@@ -15,7 +15,13 @@
         return $app['twig']->render('coins.html.twig'); //
     });
 
-    
+    // User form input
+    $app->get("/userInput", function() use ($app) {
+        $change = $_GET['number'];
+        $results = makeChange($change);
+
+        return $app['twig']->render('coins.html.twig', array('results' => $results)); // [0, 0, 0, 1]
+    });
 
     return $app;
 

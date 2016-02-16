@@ -1,6 +1,6 @@
 <?php
-    class CoinCombo
-    {
+    // class CoinCombo
+    // {
 
         function makeChange($input_amount)
         {
@@ -24,5 +24,5 @@
             return $coinage;
         }
 
-    }
+    // }
 ?>

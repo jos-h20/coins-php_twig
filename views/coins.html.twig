@@ -10,13 +10,13 @@
           <div class='container'>
             <div class='jumbotron'>
               <h1>Coins</h1>
-              <p><em>type something here</em></p>
+              <p><em>See how your cents break down.</em></p>
             </div>  <!-- /JUMBOTRON -->
 
         <!-- Row: 1 -->
             <div class='row'>
               <div class='col-sm-6'>
-                  <h2>Enter a a number</h2>
+                  <h2>Make some cents!</h2>
                   <form action='/userInput'>
                       <div class='form-group'>
                         <label for='number'>Number</label>
@@ -33,9 +33,12 @@
           <div class="row">
               <div class="col-sm-6">
                     <ul>
-                        {% for result in results %}
-                            <li>{{ result }}</li>
-                        {% endfor %}
+                        <h2>Here's your change!</h2>
+                            <li>Quarters: {{ results[0] }}</li>
+                            <li>Dimes: {{ results[1] }}</li>
+                            <li>Nickels: {{ results[2] }}</li>
+                            <li>Pennies: {{ results[3] }}</li>
+
                     </ul>
 
               </div><!--col-sm-6-->
