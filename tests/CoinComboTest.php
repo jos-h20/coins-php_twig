@@ -15,7 +15,7 @@
             $result = $test_CoinCombo->makeChange($input);
 
             //Assert tells our tests what to expect from the output of our method.
-            $this->assertEquals([1, 0, 0, 0], $result);
+            $this->assertEquals([0, 0, 0, 1], $result);
         }
     }
 
