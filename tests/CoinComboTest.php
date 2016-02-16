@@ -30,6 +30,19 @@
             //Assert tells our tests what to expect from the output of our method.
             $this->assertEquals([0, 0, 1, 2], $result);
         }
+
+        function test_CoinCombo_pennyNickleDime()
+        {
+            //Arrange
+            $test_CoinCombo = new CoinCombo;
+            $input = 17;
+
+            //Act: runs the actual method that we are testing.
+            $result = $test_CoinCombo->makeChange($input);
+
+            //Assert tells our tests what to expect from the output of our method.
+            $this->assertEquals([0, 1, 1, 2], $result);
+        }
     }
 
     // Run in terminal in project folder
