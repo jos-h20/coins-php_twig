@@ -6,13 +6,17 @@
         {
             $coinage = [0, 0, 0, 0];
 
-            $dimes = floor($input_amount / 10);
+            $quarters = floor($input_amount / 25);
+            $coinage[0] = $quarters;
+            $remainder_quarters = ($input_amount % 25);
+
+            $dimes = floor($remainder_quarters / 10);
             $coinage[1] = $dimes;
-            $remainder_dimes = ($input_amount % 10);
+            $remainder_dimes = ($remainder_quarters % 10);
 
             $nickles = floor($remainder_dimes / 5);
             $coinage[2] = $nickles;
-            $remainder_nickels = ($input_amount % 5);
+            $remainder_nickels = ($remainder_dimes % 5);
 
             $pennies = $remainder_nickels;
             $coinage[3] = $pennies;
